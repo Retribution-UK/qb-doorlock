@@ -1,239 +1,480 @@
+-- ## GABZ - PILLBOX V2
+-- ## COORDINATES: 286.562, -570.565, 43.168
 
 
--- pbgarage1 created by Peter
-Config.DoorList['pbgarage1'] = {
-    authorizedJobs = { ['ambulance'] = 0 },
-    objName = -820650556,
-    objCoords = vec3(330.134918, -561.833130, 29.775291),
-    objYaw = 160.00605773926,
-    doorRate = 1.0,
-    distance = 8,
-    fixText = false,
-    locked = true,
-    doorType = 'garage',
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Reception (top) - Main entry
+table.insert(Config.DoorList, {
+	objHeading = 249.98275756836,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(313.48, -595.4584, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- pbgarage2 created by Peter
-Config.DoorList['pbgarage2'] = {
-    doorType = 'garage',
-    distance = 8,
-    objCoords = vec3(337.277679, -564.432007, 29.775291),
-    audioRemote = false,
-    doorRate = 1.0,
-    authorizedJobs = { ['ambulance'] = 0 },
-    fixText = false,
-    locked = true,
-    objName = -820650556,
-    objYaw = 160.00607299805,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Reception (top) - Staff only
+table.insert(Config.DoorList, {
+	objHeading = 160.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(309.1338, -597.7514, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- pbgarage3 created by Peter
-Config.DoorList['pbgarage3'] = {
-    doorType = 'double',
-    distance = 1,
-    doorRate = 1.0,
-    authorizedJobs = { ['ambulance'] = 0 },
-    doors = {
-        {objName = -434783486, objYaw = 70.006050109863, objCoords = vec3(338.446655, -590.052979, 28.947092)},
-        {objName = -1700911976, objYaw = 70.006050109863, objCoords = vec3(339.326599, -587.634521, 28.947092)}
-    },
-    locked = true,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward A - Laboratory
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(307.1182, -569.569, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- reception_down created by Peter
-Config.DoorList['reception_down'] = {
-    objName = 854291622,
-    objCoords = vec3(348.546692, -585.158447, 28.947092),
-    doorType = 'door',
-    distance = 1,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambulance'] = 0 },
-    objYaw = 250.00610351562,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward A - Surgery 1
+table.insert(Config.DoorList, {
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	lockpick = false,
+	slides = false,
+	maxDistance = 2.5,
+	audioRemote = false,
+	doors = {
+		{objHash = -434783486, objHeading = 340.00003051758, objCoords = vector3(312.0052, -571.3412, 43.43392)}, -- gabz_pillbox_doubledoor_r
+		{objHash = -1700911976, objHeading = 340.00003051758, objCoords = vector3(314.4242, -572.2216, 43.43392)} -- gabz_pillbox_doubledoor_l
+ 	},		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- reception_up created by Peter
-Config.DoorList['reception_up'] = {
-    objName = 854291622,
-    objCoords = vec3(313.480072, -595.458313, 43.433910),
-    doorType = 'door',
-    distance = 1,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambulance'] = 0 },
-    objYaw = 249.98275756836,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward A - Surgery 2
+table.insert(Config.DoorList, {
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	lockpick = false,
+	slides = false,
+	maxDistance = 2.5,
+	audioRemote = false,
+	doors = {
+		{objHash = -434783486, objHeading = 340.00003051758, objCoords = vector3(317.8426, -573.4658, 43.43392)}, -- gabz_pillbox_doubledoor_r
+		{objHash = -1700911976, objHeading = 340.00003051758, objCoords = vector3(320.2616, -574.3464, 43.43392)} -- gabz_pillbox_doubledoor_l
+ 	},		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- reception2_up created by Peter
-Config.DoorList['reception2_up'] = {
-    objName = 854291622,
-    objCoords = vec3(309.133728, -597.751465, 43.433910),
-    doorType = 'door',
-    distance = 1,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambulance'] = 0 },
-    objYaw = 160.00003051758,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward A - Surgery 3
+table.insert(Config.DoorList, {
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	lockpick = false,
+	slides = false,
+	maxDistance = 2.5,
+	audioRemote = false,
+	doors = {
+		{objHash = -434783486, objHeading = 340.00003051758, objCoords = vector3(323.2376, -575.4294, 43.43392)}, -- gabz_pillbox_doubledoor_r
+		{objHash = -1700911976, objHeading = 340.00003051758, objCoords = vector3(325.6566, -576.31, 43.43392)} -- gabz_pillbox_doubledoor_l
+ 	},		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- surgery1 created by Peter
-Config.DoorList['surgery1'] = {
-    distance = 2,
-    audioRemote = false,
-    locked = true,
-    doorType = 'double',
-    doorRate = 1.0,
-    doors = {
-        {objName = -434783486, objYaw = 340.00003051758, objCoords = vec3(312.005127, -571.341187, 43.433910)},
-        {objName = -1700911976, objYaw = 340.00003051758, objCoords = vec3(314.424103, -572.221558, 43.433910)}
-    },
-    authorizedJobs = { ['ambulance'] = 0 },
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward A - Intense care (usually respawn room)
+table.insert(Config.DoorList, {
+	authorizedJobs = { ['ambulance']=0 },
+	locked = false,
+	lockpick = false,
+	slides = false,
+	maxDistance = 2.5,
+	audioRemote = false,
+	doors = {
+		{objHash = -434783486, objHeading = 160.00003051758, objCoords = vector3(318.4846, -579.2282, 43.43392)}, -- gabz_pillbox_doubledoor_r
+		{objHash = -1700911976, objHeading = 160.00003051758, objCoords = vector3(316.0658, -578.3478, 43.43392)} -- gabz_pillbox_doubledoor_l
+ 	},		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- surgery2 created by Peter
-Config.DoorList['surgery2'] = {
-    distance = 2,
-    audioRemote = false,
-    locked = true,
-    doorType = 'double',
-    doorRate = 1.0,
-    doors = {
-        {objName = -434783486, objYaw = 340.00003051758, objCoords = vec3(317.842560, -573.465881, 43.433910)},
-        {objName = -1700911976, objYaw = 340.00003051758, objCoords = vec3(320.261536, -574.346313, 43.433910)}
-    },
-    authorizedJobs = { ['ambulance'] = 0 },
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+---------------------------------------------------------------------------------------------------
 
--- surgery3 created by Peter
-Config.DoorList['surgery3'] = {
-    distance = 2,
-    audioRemote = false,
-    locked = true,
-    doorType = 'double',
-    doorRate = 1.0,
-    doors = {
-        {objName = -434783486, objYaw = 340.00003051758, objCoords = vec3(323.237549, -575.429443, 43.433910)},
-        {objName = -1700911976, objYaw = 340.00003051758, objCoords = vec3(325.656525, -576.309937, 43.433910)}
-    },
-    authorizedJobs = { ['ambulance'] = 0 },
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward B - MRI
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(336.1628, -580.1404, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- mri created by Peter
-Config.DoorList['mri'] = {
-    objName = 854291622,
-    objCoords = vec3(336.162842, -580.140320, 43.433910),
-    doorType = 'door',
-    distance = 2,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambulance'] = 0 },
-    objYaw = 340.00003051758,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward B - Diagnostics
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(340.7818, -581.8214, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- dianostics_mri created by Peter
-Config.DoorList['dianostics_mri'] = {
-    objName = 854291622,
-    objCoords = vec3(340.781830, -581.821472, 43.433910),
-    doorType = 'door',
-    distance = 2,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambluance'] = 0 },
-    objYaw = 340.00003051758,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward B - X-Ray
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(346.774, -584.0024, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- xray created by Peter
-Config.DoorList['xray'] = {
-    objName = 854291622,
-    objCoords = vec3(346.773926, -584.002441, 43.433910),
-    doorType = 'door',
-    distance = 2,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambluance'] = 0 },
-    objYaw = 340.00003051758,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward B - Director office
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(336.8664, -592.5788, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- admin created by Peter
-Config.DoorList['admin'] = {
-    objName = 854291622,
-    objCoords = vec3(339.004974, -586.703369, 43.433910),
-    doorType = 'door',
-    distance = 2,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambulance'] = 0 },
-    objYaw = 340.00003051758,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward C - Private room 369
+table.insert(Config.DoorList, {
+	objHeading = 249.98275756836,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(357.4908, -579.6106, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
 
--- cleaning_cupboard created by Peter
-Config.DoorList['cleaning_cupboard'] = {
-    objName = 854291622,
-    objCoords = vec3(303.959625, -572.557922, 43.433910),
-    doorType = 'door',
-    distance = 1,
-    fixText = false,
-    locked = true,
-    authorizedJobs = { ['ambulance'] = 0 },
-    objYaw = 70.01732635498,
-    doorRate = 1.0,
-    audioRemote = false,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000,
-}
+-- Ward C - Private room 370
+table.insert(Config.DoorList, {
+	objHeading = 249.98275756836,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(356.1252, -583.3624, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ward C - Patient room 371
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(360.5034, -588.9996, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ward C - Dr. office 372
+table.insert(Config.DoorList, {
+	objHeading = 340.00003051758,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(358.7266, -593.8814, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ward C - Dr. office 373
+table.insert(Config.DoorList, {
+	objHeading = 249.98275756836,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = false,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(352.1996, -594.1478, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ward C - Private room 374
+table.insert(Config.DoorList, {
+	objHeading = 249.98275756836,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(350.834, -597.8998, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ward C - Treatment
+table.insert(Config.DoorList, {
+	objHeading = 70.01732635498,
+	lockpick = false,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	authorizedJobs = { ['ambulance']=0 },
+	locked = true,
+	garage = false,
+	maxDistance = 2.0,
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(346.8854, -593.6, 43.43392),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- DOWNSTAIRS -------------------------------------------------------------------------------------
+
+
+
+-- Reception
+table.insert(Config.DoorList, {
+	lockpick = false,
+	locked = true,
+	maxDistance = 2.0,
+	slides = false,
+	objHash = 854291622, -- gabz_pillbox_singledoor
+	garage = false,
+	objHeading = 250.00610351562,
+	authorizedJobs = { ['ambulance']=0 },
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(348.5466, -585.1584, 28.9471),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ambulance garage - Wooden double door from hallway
+table.insert(Config.DoorList, {
+	doors = {
+		{objHash = -434783486, objHeading = 70.006050109864, objCoords = vector3(338.4466, -590.053, 28.9471)}, -- gabz_pillbox_doubledoor_r
+		{objHash = -1700911976, objHeading = 70.006050109864, objCoords = vector3(339.3266, -587.6346, 28.9471)} -- gabz_pillbox_doubledoor_l
+ },
+	lockpick = false,
+	locked = true,
+	maxDistance = 2.5,
+	slides = false,
+	audioRemote = false,
+	authorizedJobs = { ['ambulance']=0 },		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ambulance garage - Elevator right (from garage)
+table.insert(Config.DoorList, {
+	doors = {
+		{objHash = 1674289593, objHeading = 70.006050109864, objCoords = vector3(340.7712, -583.942, 27.79682)}, -- gabz_pillbox_elevdoor_l
+		{objHash = -1048421071, objHeading = 70.006050109864, objCoords = vector3(340.1254, -585.717, 27.79682)} -- gabz_pillbox_elevdoor_l
+ 	},
+	lockpick = false,
+	locked = true,
+	maxDistance = 2.0,
+	slides = true,
+	audioRemote = false,
+	authorizedJobs = { ['ambulance']=0 },	
+	textCoords = vector3(340.366,-584.852,29.0),
+	setText = true,	
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Ambulance garage - Elevator left (from garage)
+table.insert(Config.DoorList, {
+	doors = {
+		{objHash = 1674289593, objHeading = 70.006050109864, objCoords = vector3(342.1202, -580.2346, 27.79682)}, -- gabz_pillbox_elevdoor_l
+		{objHash = -1048421071, objHeading = 70.006050109864, objCoords = vector3(341.4744, -582.0096, 27.79682)} -- gabz_pillbox_elevdoor_l
+	},
+	lockpick = false,
+	locked = true,
+	maxDistance = 2.0,
+	slides = true,
+	audioRemote = false,
+	authorizedJobs = { ['ambulance']=0 },	
+	textCoords = vector3(341.906,-581.182,29.0),
+	setText = true,	
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Garage - White garage door from outside
+table.insert(Config.DoorList, {
+	lockpick = false,
+	locked = true,
+	maxDistance = 6.0,
+	slides = 6.0,
+	objHash = -820650556, -- gabz_pillbox_dlc_gate
+	garage = true,
+	objHeading = 160.00607299804,
+	authorizedJobs = { ['ambulance']=0 },
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(337.2776, -564.432, 29.7753),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Garage - White right garage door from outside
+table.insert(Config.DoorList, {
+	lockpick = false,
+	locked = true,
+	maxDistance = 6.0,
+	slides = 6.0,
+	objHash = -820650556, -- gabz_pillbox_dlc_gate
+	garage = true,
+	objHeading = 160.00605773926,
+	authorizedJobs = { ['ambulance']=0 },
+	audioRemote = false,
+	fixText = true,
+	objCoords = vector3(330.135, -561.8332, 29.7753),		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})
+
+-- Garage - Double door besides garage doors
+table.insert(Config.DoorList, {
+	doors = {
+		{objHash = -1421582160, objHeading = 25.005989074708, objCoords = vector3(321.0148, -559.9128, 28.94724)}, -- v_ilev_ct_doorr
+		{objHash = 1248599813, objHeading = 205.0061340332, objCoords = vector3(318.6656, -561.0086, 28.94724)} -- v_ilev_ct_doorl
+ },
+	lockpick = false,
+	locked = true,
+	maxDistance = 2.5,
+	slides = false,
+	audioRemote = false,
+	authorizedJobs = { ['ambulance']=0 },		
+	-- oldMethod = true,
+	-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+	-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+	-- autoLock = 1000
+})

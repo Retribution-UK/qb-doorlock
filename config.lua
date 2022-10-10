@@ -48,8 +48,8 @@ Config.DoorList['configname-identifier'] = {
 } 
 ]]
 
+Config.DoorStates = {}
 Config.DoorList = {
-	--- door1 for pacific opened with security card B
 	{
 		objName = 'hei_v_ilev_bk_gate2_pris',
 		objCoords  = vec3(261.83, 221.39, 106.41),
@@ -176,6 +176,36 @@ Config.DoorList = {
 		pickable = true,
 		distance = 1.5
 	},
+	-- Prison Door 1
+	{
+		objName = 'prop_gate_prison_01',
+		objCoords  = vec3(1844.9, 2604.8, 44.6),
+		textCoords = vec3(1844.9, 2608.5, 48.0),
+		authorizedJobs = { 'police' },
+		locked = true,
+		pickable = false,
+		distance = 13
+	},
+	-- Prison Door 2
+	{
+		objName = 'prop_gate_prison_01',
+		objCoords  = vec3(1818.5, 2604.8, 44.6),
+		textCoords = vec3(1818.5, 2608.4, 48.0),
+		authorizedJobs = { 'police' },
+		locked = true,
+		pickable = false,
+		distance = 13
+	},
+	-- Prison Door 3
+	{
+		objName = 'prop_gate_prison_01',
+		objCoords = vec3(1799.237, 2616.303, 44.6),
+		textCoords = vec3(1795.941, 2616.969, 48.0),
+		authorizedJobs = { 'police' },
+		locked = true,
+		pickable = false,
+		distance = 10
+	},
 	------------------------------------------Always add new doors below this line for your bank robberies to work!!!---------------------------------
 				------------------------------------------End Fixed Doors!!!---------------------------------
 	{
@@ -234,7 +264,7 @@ Config.DoorList = {
 	{
 		objName = 'v_ilev_arm_secdoor',
 		objYaw = -90.0,
-		objCoords  = vec3(452.6, -982.7, 30.6), 
+		objCoords  = vec3(452.6, -982.7, 30.6),
 		textCoords = vec3(452.95, -982.16, 30.99),
 		authorizedJobs = { 'police' },
 		locked = true,
@@ -273,7 +303,7 @@ Config.DoorList = {
 			}
 		}
 	},
---[[ 	-- Mission Row Cells
+	-- Mission Row Cells
 	-- Main Cells
 	{
 		objName = 'v_ilev_ph_cellgate',
@@ -1039,7 +1069,7 @@ Config.DoorList = {
 		locked = true,
 		pickable = false,
 		distance = 2.0
-	}, 
+	},
 	-- Police front gate
 	{
 		objName = 'prop_facgate_07b',
@@ -1050,12 +1080,12 @@ Config.DoorList = {
 		locked = true,
 		pickable = false,
 		distance = 20
-	},]]
+	},
 	-- Luxury Cars
 	-- Entrance Doors
 	{
 		textCoords = vec3(-803.0223, -223.8222, 37.87975),
-		authorizedJobs = { 'luxuryautos', 'police' },
+		authorizedJobs = { 'cardealer', 'police' },
 		locked = true,
 		pickable = false,
 		distance = 3.5,
@@ -1076,7 +1106,7 @@ Config.DoorList = {
 	-- Side Entrance Doors
 	{
 		textCoords = vec3(-777.1855, -244.0013, 37.333889),
-		authorizedJobs = { 'luxuryautos', 'police' },
+		authorizedJobs = { 'cardealer', 'police' },
 		locked = true,
 		pickable = false,
 		distance = 3.5,
@@ -1097,7 +1127,7 @@ Config.DoorList = {
 	-- Garage Doors
 	{
 		textCoords = vec3(-768.1264, -238.9737, 37.43247),
-		authorizedJobs = { 'luxuryautos', 'police' },
+		authorizedJobs = { 'cardealer', 'police' },
 		locked = true,
 		pickable = false,
 		distance = 13.0,
@@ -1119,7 +1149,7 @@ Config.DoorList = {
 		objName = 'apa_prop_apa_cutscene_doorb',
 		objCoords  = vec3(-21.71276, -1392.778, 29.63847),
 		textCoords = vec3(-22.31276, -1392.778, 29.63847),
-		authorizedJobs = { 'luxuryautos' },
+		authorizedJobs = { 'cardealer' },
 		objYaw = -180.0,
 		locked = true,
 		pickable = false,
@@ -1130,7 +1160,7 @@ Config.DoorList = {
 		objName = 'apa_prop_apa_cutscene_doorb',
 		objCoords  = vec3(-32.67987, -1392.064, 29.63847),
 		textCoords = vec3(-32.10987, -1392.064, 29.63847),
-		authorizedJobs = { 'luxuryautos' },
+		authorizedJobs = { 'cardealer' },
 		objYaw = 0.0,
 		locked = true,
 		pickable = false,
@@ -1141,7 +1171,7 @@ Config.DoorList = {
 		objName = 'apa_prop_apa_cutscene_doorb',
 		objCoords  = vec3(-24.22668, -1403.067, 29.63847),
 		textCoords = vec3(-24.22668, -1402.537, 29.63847),
-		authorizedJobs = { 'luxuryautos' },
+		authorizedJobs = { 'cardealer' },
 		objYaw = 90.0,
 		locked = true,
 		pickable = false,
@@ -1152,7 +1182,7 @@ Config.DoorList = {
 		objName = 'apa_prop_apa_cutscene_doorb',
 		objCoords  = vec3(-21.27107, -1406.845, 29.63847),
 		textCoords = vec3(-21.27107, -1406.245, 29.63847),
-		authorizedJobs = { 'luxuryautos' },
+		authorizedJobs = { 'cardealer' },
 		objYaw = 90.0,
 		locked = true,
 		pickable = false,
